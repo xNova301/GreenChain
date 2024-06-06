@@ -1337,58 +1337,12 @@
     }
 </script>
 
-        <script>
-        (function($) {
-            "use strict";
 
-                            $(`option[data-code=VN]`).attr('selected', '');
-            
-            $('select[name=country]').change(function() {
-                $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
-                $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
-                $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
-            });
+<!-- 
 
-            $('input[name=mobile_code]').val($('select[name=country] :selected').data('mobile_code'));
-            $('input[name=country_code]').val($('select[name=country] :selected').data('code'));
-            $('.mobile-code').text('+' + $('select[name=country] :selected').data('mobile_code'));
+    
+ -->
+    <script src="./register.js"></script>
 
-            $('.checkUser').on('focusout', function(e) {
-                var url = 'https://phinix.digital/pnixfund/user/check-user';
-                var value = $(this).val();
-                var token = 'p7RvAVqaCN6RwvMMFSTq0HkyPIfHC8ZCSvxJ5lkD';
-
-                if ($(this).attr('name') == 'mobile') {
-                    var mobile = `${$('.mobile-code').text().substr(1)}${value}`;
-                    var data = {
-                        mobile: mobile,
-                        _token: token
-                    }
-                }
-
-                if ($(this).attr('name') == 'email') {
-                    var data = {
-                        email: value,
-                        _token: token
-                    }
-                }
-
-                if ($(this).attr('name') == 'username') {
-                    var data = {
-                        username: value,
-                        _token: token
-                    }
-                }
-
-                $.post(url, data, function(response) {
-                    if (response.data != false && (response.type == 'email' || response.type == 'username' || response.type == 'mobile')) {
-                        $(`.${response.type}Exist`).text(`${response.type} already exist`);
-                    } else {
-                        $(`.${response.type}Exist`).text('');
-                    }
-                });
-            });
-        })(jQuery);
-    </script>
     </body>
 </html>

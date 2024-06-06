@@ -42,6 +42,7 @@
     </head>
 
     <body>
+        
 
         <div class="body-overlay"></div>
         <div class="sidebar-overlay"></div>
@@ -264,7 +265,7 @@
                                     <ul class="social-list social-list-2">
                                         <li class="social-list__item">
                                             <a id="social-list__link"
-                                                href
+                                                href="#"
                                                 class="social-list__link flex-center"
                                                 target="_blank">
                                                 <i
@@ -273,7 +274,7 @@
                                         </li>
                                         <li class="social-list__item">
                                             <a
-                                                href
+                                                href="#"
                                                 class="social-list__link flex-center"
                                                 target="_blank">
                                                 <i class="fab fa-x-twitter"></i>
@@ -281,7 +282,7 @@
                                         </li>
                                         <li class="social-list__item">
                                             <a
-                                                href
+                                                href="#"
                                                 class="social-list__link flex-center"
                                                 target="_blank">
                                                 <i
@@ -290,7 +291,7 @@
                                         </li>
                                         <li class="social-list__item">
                                             <a
-                                                href
+                                                href="#"
                                                 class="social-list__link flex-center"
                                                 target="_blank">
                                                 <i
@@ -574,30 +575,6 @@
         }
     }
 </script>
-
-    <script>
-        // URL mà bạn muốn chia sẻ
-        const urlToShare = 'http://127.0.0.1:5500/success-story/70/';
-
-        // Mã hóa URL
-        const encodedUrl = encodeURIComponent(urlToShare);
-
-        // Tạo đường link chia sẻ lên Facebook
-        const facebookShareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-        document.getElementById('facebook-share-link').href = facebookShareLink;
-
-        // Tạo đường link chia sẻ lên LinkedIn
-        const linkedinShareLink = `https://www.linkedin.com/shareArticle?url=${encodedUrl}`;
-        document.getElementById('linkedin-share-link').href = linkedinShareLink;
-
-        // Tạo đường link chia sẻ lên Pinterest
-        const pinterestShareLink = `https://pinterest.com/pin/create/button/?url=${encodedUrl}`;
-        document.getElementById('pinterest-share-link').href = pinterestShareLink;
-
-        // Tạo đường link chia sẻ lên Twitter
-        const twitterShareLink = `https://twitter.com/intent/tweet?url=${encodedUrl}`;
-        document.getElementById('twitter-share-link').href = twitterShareLink;
-    </script>
 
     </body>
 </html>

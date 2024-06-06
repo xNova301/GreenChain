@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>GreenChain | Create New Campaign</title>
+
+        <meta name="title" content="GreenChain | Create New Campaign">
+
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/universal/css/bootstrap.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/universal/css/font-awesome.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/slick.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/universal/css/line-awesome.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/lightbox.min.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/aos.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/main.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/custom.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/color.php?color1=47D195&amp;color2=9DE713">
+
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/themes/primary/css/dropzone.min.css">
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/universal/css/datepicker.css">
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+            integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <style>
+        .date-picker {
+            caret-color: transparent;
+            cursor: pointer;
+        }
+        .dropzone {
+            border-color: hsl(var(--black) / 0.1);
+            min-height: auto;
+            transition: .3s
+        }
+        .dropzone:hover,
+        .dropzone:focus,
+        .dropzone:focus-within {
+            border-color: hsl(var(--base));
+        }
+        .dropzone .dz-message {
+            margin: 30px 0;
+        }
+        .dropzone .dz-message button::before {
+            content: "\f382";
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            display: block;
+            font-size: 3rem;
+            color: hsl(var(--base));
+        }
+        .dropzone .dz-preview .dz-image {
+            border-radius: 5px;
+        }
+        .dropzone .dz-preview .dz-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .dropzone .dz-preview .dz-remove {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            font-size: 0;
+            width: 17px;
+            height: 17px;
+            background: hsl(var(--danger));
+            border-radius: 50%;
+            z-index: 20;
+        }
+        .dropzone .dz-preview .dz-remove::after {
+            content: '\f00d';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%, -50%);
+            font-size: 12px;
+            color: hsl(var(--white));
+            line-height: 17px;
+        }
+    </style>
+        <style>
+    </style>
+    </head>
+
+    <body>
+        <div class="preloader">
+            <div class="loader-p"></div>
+        </div>
+
+        <div class="body-overlay"></div>
+        <div class="sidebar-overlay"></div>
+
+        <a class="scroll-top">
+            <i class="fas fa-angle-double-up"></i>
+        </a>
+
+        <header class="header" id="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand logo"
+                        href="../../../index.html">
+                        <img
+                            src="../../../greenchain-color.png"
+                            alt="logo">
+                    </a>
+                    <button class="navbar-toggler header-button" type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span id="hiddenNav"><i class="las la-bars"></i></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse"
+                        id="navbarSupportedContent">
+                        <ul
+                            class="navbar-nav nav-menu ms-auto align-items-lg-center">
+                            <li class="nav-item d-block d-lg-none">
+                                <div
+                                    class="top-button d-flex flex-wrap justify-content-between align-items-center">
+                                    <div class="language-box">
+                                        <select
+                                            class="select form--control form-select langSel">
+                                            <option value="en" selected>
+                                                English
+                                            </option>
+                                            <option value="bn">
+                                                Bangla
+                                            </option>
+                                            <option value="fn">
+                                                French
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <ul
+                                        class="login-registration-list d-flex flex-wrap align-items-center">
+                                        <li
+                                            class="login-registration-list__item">
+                                            <a
+                                                href="../../../index.html"
+                                                class="btn btn--sm btn--base">Home</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    My Campaign </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/campaign/new"
+                                            class="dropdown-menu__link">Create
+                                            Campaign</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/campaign/index"
+                                            class="dropdown-menu__link">All
+                                            Campaigns</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/campaign/approved"
+                                            class="dropdown-menu__link">Approved
+                                            Campaigns</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/campaign/pending"
+                                            class="dropdown-menu__link">Pending
+                                            Campaigns</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/campaign/rejected"
+                                            class="dropdown-menu__link">Rejected
+                                            Campaigns</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Donations </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/donation/history"
+                                            class="dropdown-menu__link">My
+                                            Donations</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/donation/received"
+                                            class="dropdown-menu__link">Received
+                                            Donations</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Withdraw </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/withdraw"
+                                            class="dropdown-menu__link">Withdraw
+                                            Money</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/withdraw/index"
+                                            class="dropdown-menu__link">Withdraw
+                                            History</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    href="../../../user/transactions"
+                                    class="nav-link">Transactions</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle"
+                                    role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    xnova001
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/dashboard"
+                                            class="dropdown-menu__link">Dashboard</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/profile"
+                                            class="dropdown-menu__link">Profile
+                                            Settings</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/change/password"
+                                            class="dropdown-menu__link">Change
+                                            Password</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/twofactor"
+                                            class="dropdown-menu__link">2FA
+                                            Settings</a>
+                                    </li>
+                                    <li class="dropdown-menu__list">
+                                        <a
+                                            href="../../../user/logout"
+                                            class="dropdown-menu__link">Log
+                                            Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item d-lg-block d-none">
+                                <div class="d-flex gap-2">
+                                    <a href="../../../index.html"
+                                        class="btn btn--sm btn--base">Home</a>
+
+                                    <div class="language-box language-box-web">
+                                        <select
+                                            class="select form--control form-select langSel">
+                                            <option value="en" selected>
+                                                English
+                                            </option>
+                                            <option value="bn">
+                                                Bangla
+                                            </option>
+                                            <option value="fn">
+                                                French
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <section class="breadcrumb bg-img"
+            data-background-image="https://phinix.digital/pnixfund/assets/images/site/breadcrumb/65b24f623fe111706184546.png">
+            <div class="breadcrumb__bg bg-img"
+                data-background-image="https://phinix.digital/pnixfund/assets/themes/primary/images/breadcrumb-vector.png"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="breadcrumb__wrapper">
+                            <h1 class="breadcrumb__title">Create New
+                                Campaign</h1>
+                            <ul class="breadcrumb__list">
+                                <li><a
+                                        href="../../../index.html">Home</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="create-campaign py-60">
+            <div class="container">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="custom--card">
+                            <div class="card-body">
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <label
+                                            class="form--label required">Gallery</label>
+                                    </div>
+                                    <form
+                                        action="../../../user/campaign/gallery-upload"
+                                        method="POST" class="dropzone"
+                                        enctype="multipart/form-data">
+                                        <input type="hidden" name="_token"
+                                            value="l7U3P9ePnKvKcOBTFlAJigmtb2BXuVWTITkN0AgB"
+                                            autocomplete="off"> </form>
+                                    <div class="col-12">
+                                        <span><em><small>*Supported files: <span
+                                                        class="text--base fw-bold">jpeg,
+                                                        jpg, png</span>. Image
+                                                    size: <span
+                                                        class="text--base fw-bold">855x475px</span>.</small></em></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="custom--card">
+                            <div class="card-body">
+                                <form
+                                    action="../../../user/campaign/store"
+                                    method="POST" class="row g-4"
+                                    enctype="multipart/form-data">
+                                    <input type="hidden" name="_token"
+                                        value="l7U3P9ePnKvKcOBTFlAJigmtb2BXuVWTITkN0AgB"
+                                        autocomplete="off"> <div class="col-12">
+                                        <div
+                                            class="d-flex flex-column align-items-center">
+                                            <div
+                                                class="upload__img mb-2 ms-auto">
+                                                <label for="imageUpload"
+                                                    class="form--label required">Campaign
+                                                    Image</label>
+                                                <label for="imageUpload"
+                                                    class="upload__img__btn"><i
+                                                        class="las la-camera"></i></label>
+                                                <input type="file"
+                                                    id="imageUpload"
+                                                    name="image" required
+                                                    accept=".jpeg, .jpg, .png">
+                                                <div
+                                                    class="upload__img-preview image-preview">+</div>
+                                            </div>
+                                            <span><em><small><i
+                                                            class="fas fa-info-circle me-1"></i>Supported
+                                                        files: <span
+                                                            class="text--base fw-bold">jpeg,
+                                                            jpg, png</span>.
+                                                        Image size: <span
+                                                            class="text--base fw-bold">855x475px</span>.
+                                                        Thumbnail size: <span
+                                                            class="text--base fw-bold">415x230px</span>.</small></em></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form--label required">Name</label>
+                                        <div class="input--group">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-h"></i></span>
+                                            <input type="text"
+                                                class="form--control"
+                                                name="name" value required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label
+                                            class="form--label required">Category</label>
+                                        <div class="input--group">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-bars"></i></span>
+                                            <select
+                                                class="form--control form-select"
+                                                name="category_id" required>
+                                                <option value selected>Select
+                                                    Category</option>
+
+                                                <option value="2">
+                                                    Treatment
+                                                </option>
+                                                <option value="3">
+                                                    Medical
+                                                </option>
+                                                <option value="4">
+                                                    Emergency
+                                                </option>
+                                                <option value="5">
+                                                    Non Profit
+                                                </option>
+                                                <option value="6">
+                                                    Financial Emergency
+                                                </option>
+                                                <option value="7">
+                                                    Environment
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form--label required">Goal
+                                            Amount</label>
+                                        <div class="input--group">
+                                            <span
+                                                class="input-group-text">$</span>
+                                            <input type="number" step="any"
+                                                min="0" class="form--control"
+                                                name="goal_amount" value
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form--label required">Preferred
+                                            Amounts</label>
+                                        <div class="d-flex gap-2">
+                                            <div class="input--group w-100">
+                                                <span
+                                                    class="input-group-text">$</span>
+                                                <input type="number" step="any"
+                                                    min="0"
+                                                    class="form--control"
+                                                    name="preferred_amounts[]"
+                                                    value required>
+                                            </div>
+                                            <a role="button"
+                                                class="btn btn--base px-3 d-flex align-items-center"
+                                                id="addMoreAmounts">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </a>
+                                        </div>
+                                        <div class="add-more-amounts"></div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label
+                                            class="form--label required">Start
+                                            Date</label>
+                                        <div class="input--group">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-calendar-days"></i></span>
+                                            <input type="text"
+                                                class="form--control date-picker"
+                                                name="start_date" value
+                                                data-language="en" required
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label class="form--label required">End
+                                            Date</label>
+                                        <div class="input--group">
+                                            <span class="input-group-text"><i
+                                                    class="fa-solid fa-calendar-days"></i></span>
+                                            <input type="text"
+                                                class="form--control date-picker"
+                                                name="end_date" value
+                                                data-language="en" required
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form--label">Document</label>
+                                        <div class="d-flex mb-1">
+                                            <input type="file"
+                                                class="form--control"
+                                                name="document" accept=".pdf">
+                                        </div>
+                                        <span><em><small>Supported file: <span
+                                                        class="text--base fw-bold">.pdf</span>.</small></em></span>
+                                    </div>
+                                    <div class="col-12">
+                                        <label
+                                            class="form--label required">Description</label>
+                                        <textarea
+                                            class="form--control ck-editor"
+                                            name="description" rows="10">
+                                                                            </textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button id="create-campaign-submit" type="submit"
+                                            class="btn btn--base w-100">Create Campaign</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-area">
+            <div class="footer-area__bg bg-img"
+                data-background-image="https://phinix.digital/pnixfund/assets/themes/primary/images/footer-mask.png"></div>
+            <div class="pb-60 pt-60">
+                <div class="container">
+                    <div class="row justify-content-center gy-5">
+                        <div class="col-xl-4 col-sm-6 col-xsm-6">
+                            <div class="footer-item">
+                                <div class="footer-item__logo">
+                                    <a href="../../../index.html">
+                                        <img
+                                            src="../../../greenchain-color.png"
+                                            alt="footer logo">
+                                    </a>
+                                </div>
+                                <p class="footer-item__desc">Join our community
+                                    and be part of the change. Follow us on
+                                    social media for updates, success stories,
+                                    and more. Make a difference.</p>
+                                <ul class="social-list">
+                                    <li class="social-list__item">
+                                        <a href="https://www.facebook.com/"
+                                            class="social-list__link flex-center"
+                                            target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://twitter.com/"
+                                            class="social-list__link flex-center"
+                                            target="_blank">
+                                            <i
+                                                class="fa-brands fa-x-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://www.linkedin.com/"
+                                            class="social-list__link flex-center"
+                                            target="_blank">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://www.instagram.com/"
+                                            class="social-list__link flex-center"
+                                            target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-list__item">
+                                        <a href="https://youtube.com"
+                                            class="social-list__link flex-center"
+                                            target="_blank">
+                                            <i class="fab fa-youtube"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2 col-sm-6 col-xsm-6">
+                            <div class="footer-item">
+                                <h5 class="footer-item__title">Useful Links</h5>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../policy/privacy-policy/11"
+                                            class="footer-menu__link">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../policy/terms-of-service/12"
+                                            class="footer-menu__link">
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../policy/support-policy/82"
+                                            class="footer-menu__link">
+                                            Support Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-xsm-6">
+                            <div class="footer-item">
+                                <h5 class="footer-item__title">Categories</h5>
+
+                                <ul class="footer-menu">
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../campaigns/environment"
+                                            class="footer-menu__link">
+                                            Environment
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../campaigns/financial-emergency"
+                                            class="footer-menu__link">
+                                            Financial Emergency
+                                        </a>
+                                    </li>
+                                    <li class="footer-menu__item">
+                                        <a
+                                            href="../../../campaigns/non-profit"
+                                            class="footer-menu__link">
+                                            Non Profit
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-sm-6 col-xsm-6">
+                            <div class="footer-item">
+                                <h5 class="footer-item__title">Contact With
+                                    Us</h5>
+                                <ul class="footer-contact-menu">
+                                    <li class="footer-contact-menu__item">
+                                        <div
+                                            class="footer-contact-menu__item-icon">
+                                            <i
+                                                class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div
+                                            class="footer-contact-menu__item-content">
+                                            <p>Q12, TP HCM</p>
+                                        </div>
+                                    </li>
+                                    <li class="footer-contact-menu__item">
+                                        <div
+                                            class="footer-contact-menu__item-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div
+                                            class="footer-contact-menu__item-content">
+                                            <p>howlhunt3001@gmail.com</p>
+                                        </div>
+                                    </li>
+                                    <li class="footer-contact-menu__item">
+                                        <div
+                                            class="footer-contact-menu__item-icon">
+                                            <i class="fas fa-phone"></i> </div>
+                                        <div
+                                            class="footer-contact-menu__item-content">
+                                            <p>+84 0376620169</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top End-->
+
+            <!-- bottom Footer -->
+            <div class="bottom-footer py-3">
+                <div class="container">
+                    <div class="text-center">
+                        <p class="bottom-footer__text">© Copyright 2024. All
+                            rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script
+            src="https://phinix.digital/pnixfund/assets/universal/js/jquery-3.7.1.min.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/universal/js/bootstrap.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/slick.min.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/viewport.jquery.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/lightbox.min.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/aos.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/main.js"></script>
+
+        <link rel="stylesheet"
+            href="https://phinix.digital/pnixfund/assets/universal/css/iziToast.min.css">
+        <script
+            src="https://phinix.digital/pnixfund/assets/universal/js/iziToast.min.js"></script>
+
+        <script>
+    "use strict";
+
+    function showToasts(status, message) {
+        if (typeof message == 'string') {
+            iziToast[status]({
+                message: message,
+                position: "topRight"
+            });
+        } else {
+            $.each(message, function(i, val) {
+                iziToast[status]({
+                    message: val,
+                    position: "topRight"
+                });
+            });
+        }
+    }
+</script>
+
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/dropzone.min.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/themes/primary/js/ckeditor.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/universal/js/datepicker.js"></script>
+        <script
+            src="https://phinix.digital/pnixfund/assets/universal/js/datepicker.en.js"></script>
+        <script type="text/javascript">
+        (function($) {
+            "use strict"
+
+            new Dropzone('.dropzone', {
+                thumbnailWidth: 200,
+                acceptedFiles: '.jpg, .jpeg, .png',
+                addRemoveLinks: true,
+                success: function(file, response) {
+                    file.unique_name = response.image
+
+                    showToasts('success', response.message)
+                },
+                error: function(file, response) {
+                    showToasts('error', response.error.file[0])
+                },
+                removedfile: function(file) {
+                    let url = "https://phinix.digital/pnixfund/user/campaign/gallery-remove"
+                    let data = {
+                        file: file.unique_name,
+                        _token: "l7U3P9ePnKvKcOBTFlAJigmtb2BXuVWTITkN0AgB",
+                    }
+
+                    $.post(url, data, function(response) {
+                        if (response.status === 'success') {
+                            showToasts('success', response.message)
+                        } else {
+                            console.error(response)
+                        }
+                    })
+
+                    let fileRef = file.previewElement
+
+                    return fileRef != null ? fileRef.parentNode.removeChild(fileRef) : void 0
+                }
+            });
+        })(jQuery)
+    </script>
+      
+        <script type="text/javascript">
+        (function($) {
+            "use strict"
+
+            // Add More Preferred Amounts On Campaign Create Start
+            $('#addMoreAmounts').on('click', function () {
+                $('.add-more-amounts').append(`
+                    <div class="extra-amount d-flex gap-2 pt-2">
+                        <div class="input--group w-100">
+                            <span class="input-group-text">$</span>
+                            <input type="number" step="any" min="0" class="form--control" name="preferred_amounts[]" required>
+                        </div>
+                        <a role="button" class="btn btn--danger px-3 d-flex align-items-center close-extra-amount">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </div>
+                `)
+            })
+
+            $(document).on('click', '.close-extra-amount', function () {
+                $(this).closest('.extra-amount').remove()
+            })
+            // Add More Preferred Amounts On Campaign Create End
+
+            $('.date-picker').datepicker({
+                dateFormat: 'dd-mm-yyyy',
+                minDate: new Date(),
+            })
+
+            $('.date-picker').on('input keyup keydown keypress', function() {
+                return false
+            })
+        })(jQuery)
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const createCampaignForm = document.getElementById('createCampaignForm');
+
+    createCampaignForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Lấy giá trị từ các trường nhập liệu
+        const name = document.querySelector('input[name="name"]').value;
+        const category = document.querySelector('select[name="category_id"]').value;
+        const goalAmount = document.querySelector('input[name="goal_amount"]').value;
+        const startDate = document.querySelector('input[name="start_date"]').value;
+        const endDate = document.querySelector('input[name="end_date"]').value;
+        const description = document.querySelector('textarea[name="description"]').value;
+
+        // Tạo một đối tượng dự án từ các giá trị đã lấy
+        const campaign = {
+            name,
+            category,
+            goalAmount,
+            startDate,
+            endDate,
+            description
+        };
+
+        // Tạo một hàng mới trong bảng hiển thị dự án
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td>${name}</td>
+            <td>${category}</td>
+            <td>${goalAmount}</td>
+            <td>$0.00</td>
+            <td>${endDate}</td>
+            <td><span class="badge badge--warning">Pending</span></td>
+            <td><span>N/A</span></td>
+        `;
+        
+        const tableBody = document.querySelector('tbody');
+        tableBody.appendChild(newRow);
+
+        // Hiển thị thông báo thành công
+        alert('Campaign created successfully.');
+    });
+});
+
+    </script>
+    </body>
+</html>

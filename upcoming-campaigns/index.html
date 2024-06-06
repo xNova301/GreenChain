@@ -133,7 +133,7 @@
                                 <div class="d-flex gap-2">
                                     <a
                                         href="../user/login"
-                                        class="btn btn--sm btn--base">Login</a>
+                                        class="hoactentaikhoan btn btn--sm btn--base">Login</a>
 
                                     <div class="language-box language-box-web">
                                         <select
@@ -218,7 +218,7 @@
                                     <a
                                         href="../upcoming-campaign/tech-for-tomorrow-stem-education-drive">
                                         <img
-                                            src="../assets/universal/images/campaign/6600b0c67ebbd1711321286.jpg"
+                                            src="https://phinix.digital/pnixfund/assets/universal/images/campaign/6600b0c67ebbd1711321286.jpg"
                                             alt="image">
                                     </a>
                                     <div class="event__date">
@@ -640,6 +640,29 @@
             })
         })(jQuery)
     </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            // Kiểm tra xem đã có thông tin người dùng được lưu trữ trong localStorage chưa
+            const storedUserData = localStorage.getItem('userData');
+            if (storedUserData) {
+                // Nếu có, lấy thông tin người dùng và chuyển đổi thành đối tượng JavaScript
+                const userData = JSON.parse(storedUserData);
+                
+                // Lấy tên người dùng từ dữ liệu người dùng
+                const loggedInUsername = userData.username;
+                
+                // Tìm thẻ <a> của liên kết "Login"
+                const loginLink = document.querySelector('.navbar-nav .hoactentaikhoan');
+                if (loginLink) {
+                    // Thay đổi văn bản của liên kết thành "Dashboard"
+                    loginLink.textContent = "Dashboard";
+                    
+                    // Thay đổi URL của liên kết để chuyển hướng đến trang dashboard
+                    loginLink.href = "../user/dashboard/index.html";
+                }
+            }
+            });
+        </script>
       
     </body>
 </html>

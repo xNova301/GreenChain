@@ -99,7 +99,7 @@
                                             class="login-registration-list__item">
                                             <a
                                                 href="../user/login/index.html"
-                                                class="btn btn--sm btn--base">Login</a>
+                                                class=" btn btn--sm btn--base">Login</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -137,7 +137,7 @@
                                 <div class="d-flex gap-2">
                                     <a
                                         href="../user/login/index.html"
-                                        class="btn btn--sm btn--base">Login</a>
+                                        class="hoactentaikhoan btn btn--sm btn--base">Login</a>
 
                                     <div class="language-box language-box-web">
                                         <select
@@ -204,9 +204,9 @@
                                 <h2 class="section-heading__title">Together We
                                     Fund, Together We Flourish</h2>
                             </div>
-                            <p class="about__desc">Welcome to PnixFund, your
+                            <p class="about__desc">Welcome to GreenChain, your
                                 go-to platform for meaningful crowdfunding. At
-                                PnixFund, we&#039;re driven by a simple yet
+                                GreenChain, we&#039;re driven by a simple yet
                                 powerful mission: to empower individuals,
                                 organizations, and communities to create
                                 positive change through collective action and
@@ -618,5 +618,29 @@
         <script
             src="https://phinix.digital/pnixfund/assets/themes/primary/js/odometer.min.js"></script>
         
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Kiểm tra xem đã có thông tin người dùng được lưu trữ trong localStorage chưa
+    const storedUserData = localStorage.getItem('userData');
+    if (storedUserData) {
+        // Nếu có, lấy thông tin người dùng và chuyển đổi thành đối tượng JavaScript
+        const userData = JSON.parse(storedUserData);
+        
+        // Lấy tên người dùng từ dữ liệu người dùng
+        const loggedInUsername = userData.username;
+        
+        // Tìm thẻ <a> của liên kết "Login"
+        const loginLink = document.querySelector('.navbar-nav .hoactentaikhoan');
+        if (loginLink) {
+            // Thay đổi văn bản của liên kết thành "Dashboard"
+            loginLink.textContent = "Dashboard";
+            
+            // Thay đổi URL của liên kết để chuyển hướng đến trang dashboard
+            loginLink.href = "../user/dashboard/index.html";
+        }
+    }
+});
+    </script>
+
     </body>
 </html>
