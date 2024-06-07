@@ -475,3 +475,39 @@
     });
     //========================= Scroll To Top Icon Js End ======================
   })(jQuery);
+
+
+document.addEventListener('DOMContentLoaded', async function () {
+    try {
+        // Fetch the logged-in user's username from localStorage
+        const loggedInUsername = localStorage.getItem('loggedInUser');
+
+        if (loggedInUsername) {
+            // Fetch the stored user data from the MockAPI
+            const response = await fetch('https://662caade0547cdcde9ded95c.mockapi.io/account/taikhoan');
+            if (response.ok) {
+                const users = await response.json();
+
+                // Find the user data matching the logged-in username
+                const userData = users.find(user => user.username === loggedInUsername);
+
+                if (userData) {
+                    // Tìm thẻ <a> của liên kết "Login"
+                    const loginLink = document.querySelector('.navbar-nav .hoactentaikhoan');
+                    if (loginLink) {
+                        // Thay đổi văn bản của liên kết thành "Dashboard"
+                        loginLink.textContent = "Dashboard";
+
+                        // Thay đổi URL của liên kết để chuyển hướng đến trang dashboard
+                        loginLink.href = "https://green-chain-biuf.vercel.app/user/dashboard/index.html";
+                    }
+                }
+            } else {
+                console.error('Failed to retrieve user data from MockAPI.');
+            }
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+

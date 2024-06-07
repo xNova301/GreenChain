@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('form').addEventListener('submit', function (event) {
+    document.querySelector('form').addEventListener('submit', async function (event) {
         event.preventDefault(); // Prevent the form from submitting
 
         // Get form values
@@ -38,12 +38,25 @@ document.addEventListener('DOMContentLoaded', function () {
             password
         };
 
-        // Save the object to localStorage
-        localStorage.setItem('userData', JSON.stringify(userData));
+        try {
+            const response = await fetch('https://662caade0547cdcde9ded95c.mockapi.io/account/taikhoan', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
 
-        // Optionally, you can redirect the user to another page after saving the data
-        // window.location.href = 'success.html';
-
-        alert('User data saved to localStorage.');
+            if (response.ok) {
+                alert('User data saved successfully.');
+                // Optionally, you can redirect the user to another page after saving the data
+                // window.location.href = 'success.html';
+            } else {
+                alert('Failed to save user data.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while saving user data.');
+        }
     });
 });
