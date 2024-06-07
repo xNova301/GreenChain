@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Save the username to localStorage
                     localStorage.setItem('loggedInUser', user.username);
                     // Redirect to a dashboard or another page
-                    window.location.href = '../dashboard'; // Change this to your desired page
+                    window.location.href = 'https://green-chain-biuf.vercel.app/dashboard'; // Change this to your desired page
                 } else {
                     // Login failed
                     alert('Invalid username/email or password.');
